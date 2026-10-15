@@ -16,9 +16,12 @@ header { background:var(--primary); color:#fff; padding:1rem 2rem; }
 .header-inner { max-width:1000px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
 .logo { font-size:1.4rem; font-weight:bold; letter-spacing:0.5px; }
 .logo span { color:#e8c14a; }
+nav { display:flex; align-items:center; gap:1.4rem; flex-wrap:wrap; }
 nav ul { list-style:none; display:flex; gap:1.4rem; flex-wrap:wrap; }
 nav a { color:#fff; font-size:0.95rem; }
 nav a:hover { color:#e8c14a; text-decoration:none; }
+.lang-toggle { background:transparent; border:1px solid #e8c14a; color:#e8c14a; padding:0.35rem 0.75rem; font-family:inherit; font-size:0.85rem; cursor:pointer; border-radius:3px; }
+.lang-toggle:hover { background:#e8c14a; color:var(--primary); }
 .hero { background:var(--primary); color:#fff; text-align:center; padding:4.5rem 2rem; }
 .hero h1 { font-size:2.4rem; margin-bottom:1rem; }
 .hero p { font-size:1.1rem; max-width:640px; margin:0 auto 1.8rem; }
@@ -63,42 +66,85 @@ footer a { color:#e8c14a; }
     <div class="logo">Officiant <span>Xavier</span></div>
     <nav>
       <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#samples">Ceremony Samples</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#reviews">Reviews</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#services"><span data-lang="en">Services</span><span data-lang="es">Servicios</span></a></li>
+        <li><a href="#samples"><span data-lang="en">Ceremony Samples</span><span data-lang="es">Ejemplos</span></a></li>
+        <li><a href="#faq"><span data-lang="en">FAQ</span><span data-lang="es">Preguntas</span></a></li>
+        <li><a href="#reviews"><span data-lang="en">Reviews</span><span data-lang="es">Reseñas</span></a></li>
+        <li><a href="#contact"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a></li>
       </ul>
+      <button id="lang-toggle" class="lang-toggle" aria-label="Change language">
+        <span data-lang="en">ES</span>
+        <span data-lang="es">EN</span>
+      </button>
     </nav>
   </div>
 </header>
 
 <section class="hero">
-  <h1>Wedding ceremonies in Middlesex County, NJ and surrounding counties</h1>
-  <p>Traditional, interfaith, and bilingual ceremonies, written for the couple in front of me rather than pulled from a template.</p>
-  <a href="#contact" class="btn">Book a free consultation</a>
+  <h1>
+    <span data-lang="en">Wedding ceremonies in Middlesex County, NJ and surrounding counties</span>
+    <span data-lang="es">Ceremonias de boda en Middlesex County, NJ y condados cercanos</span>
+  </h1>
+  <p>
+    <span data-lang="en">Traditional, interfaith, and bilingual ceremonies, written for the couple in front of me rather than pulled from a template.</span>
+    <span data-lang="es">Ceremonias tradicionales, interreligiosas y bilingües, escritas para la pareja que tengo delante, no sacadas de una plantilla.</span>
+  </p>
+  <a href="#contact" class="btn">
+    <span data-lang="en">Book a free consultation</span>
+    <span data-lang="es">Reservar una consulta gratuita</span>
+  </a>
 </section>
 
 <section id="services">
   <div class="container">
-    <h2>Services</h2>
-    <p class="subtitle">Each ceremony is written after we talk, not before.</p>
+    <h2>
+      <span data-lang="en">Services</span>
+      <span data-lang="es">Servicios</span>
+    </h2>
+    <p class="subtitle">
+      <span data-lang="en">Each ceremony is written after we talk, not before.</span>
+      <span data-lang="es">Cada ceremonia se escribe después de hablar, no antes.</span>
+    </p>
     <div class="grid">
       <div class="card">
-        <h3>Traditional ceremonies</h3>
-        <p>Classic structure, standard vows, and readings. Useful when you want a ceremony your grandparents will recognize.</p>
+        <h3>
+          <span data-lang="en">Traditional ceremonies</span>
+          <span data-lang="es">Ceremonias tradicionales</span>
+        </h3>
+        <p>
+          <span data-lang="en">Classic structure, standard vows, and readings. Useful when you want a ceremony your grandparents will recognize.</span>
+          <span data-lang="es">Estructura clásica, votos estándar y lecturas. Útil cuando quieres una ceremonia que tus abuelos reconozcan.</span>
+        </p>
       </div>
       <div class="card">
-        <h3>Interfaith and non-denominational</h3>
-        <p>Two backgrounds, one ceremony. I work with both families to decide what stays, what changes, and what gets left out.</p>
+        <h3>
+          <span data-lang="en">Interfaith and non-denominational</span>
+          <span data-lang="es">Interreligiosas y no confesionales</span>
+        </h3>
+        <p>
+          <span data-lang="en">Two backgrounds, one ceremony. I work with both families to decide what stays, what changes, and what gets left out.</span>
+          <span data-lang="es">Dos tradiciones, una ceremonia. Trabajo con las dos familias para decidir qué se queda, qué cambia y qué se deja fuera.</span>
+        </p>
       </div>
       <div class="card">
-        <h3>Bilingual ceremonies</h3>
-        <p>English, Spanish, or a mix. I can translate the full ceremony or alternate sections so both sides of the room follow along.</p>
+        <h3>
+          <span data-lang="en">Bilingual ceremonies</span>
+          <span data-lang="es">Ceremonias bilingües</span>
+        </h3>
+        <p>
+          <span data-lang="en">English, Spanish, or a mix. I can translate the full ceremony or alternate sections so both sides of the room follow along.</span>
+          <span data-lang="es">Inglés, español o una mezcla. Puedo traducir la ceremonia completa o alternar secciones para que ambos lados de la sala sigan la ceremonia.</span>
+        </p>
       </div>
       <div class="card">
-        <h3>Custom vows and ceremony writing</h3>
-        <p>You tell me the story. I draft the ceremony. We revise until the wording sounds like you, not like a wedding blog.</p>
+        <h3>
+          <span data-lang="en">Custom vows and ceremony writing</span>
+          <span data-lang="es">Votos y ceremonia personalizados</span>
+        </h3>
+        <p>
+          <span data-lang="en">You tell me the story. I draft the ceremony. We revise until the wording sounds like you, not like a wedding blog.</span>
+          <span data-lang="es">Tú me cuentas la historia. Yo redacto la ceremonia. Revisamos hasta que suene a vosotros, no a un blog de bodas.</span>
+        </p>
       </div>
     </div>
   </div>
@@ -106,60 +152,111 @@ footer a { color:#e8c14a; }
 
 <section id="samples" class="samples">
   <div class="container">
-    <h2>Ceremony samples</h2>
-    <p class="subtitle">Free to read and adapt. No email required.</p>
+    <h2>
+      <span data-lang="en">Ceremony samples</span>
+      <span data-lang="es">Ejemplos de ceremonia</span>
+    </h2>
+    <p class="subtitle">
+      <span data-lang="en">Free to read and adapt. No email required.</span>
+      <span data-lang="es">Gratis para leer y adaptar. Sin correo obligatorio.</span>
+    </p>
     <ul class="sample-list">
-      <li><a href="ceremony-samples/traditional.html">Traditional wedding ceremony script</a> — full text with processional, opening, vows, rings, and pronouncement.</li>
-      <li><a href="ceremony-samples/interfaith.html">Interfaith ceremony outline</a> — how to order two traditions without favoring one.</li>
-      <li><a href="ceremony-samples/bilingual.html">Bilingual ceremony template</a> — English and Spanish structure with transition phrasing.</li>
-      <li><a href="ceremony-samples/vow-writing.html">Vow writing guide</a> — prompts and examples for writing your own vows.</li>
-      <li><a href="ceremony-samples/unity-rituals.html">Unity ritual options</a> — candle, sand, rope, wine box, and what each one actually signals.</li>
-      <li><a href="ceremony-samples/marriage-license.html">Marriage license guide for [Your State]</a> — where to apply, what to bring, and how long it takes.</li>
+      <li><a href="ceremony-samples/traditional.html"><span data-lang="en">Traditional wedding ceremony script</span><span data-lang="es">Guion de ceremonia tradicional</span></a> — <span data-lang="en">full text with processional, opening, vows, rings, and pronouncement.</span><span data-lang="es">texto completo con entrada, apertura, votos, anillos y proclamación.</span></li>
+      <li><a href="ceremony-samples/interfaith.html"><span data-lang="en">Interfaith ceremony outline</span><span data-lang="es">Esquema de ceremonia interreligiosa</span></a> — <span data-lang="en">how to order two traditions without favoring one.</span><span data-lang="es">cómo ordenar dos tradiciones sin favorecer a una.</span></li>
+      <li><a href="ceremony-samples/bilingual.html"><span data-lang="en">Bilingual ceremony template</span><span data-lang="es">Plantilla de ceremonia bilingüe</span></a> — <span data-lang="en">English and Spanish structure with transition phrasing.</span><span data-lang="es">estructura en inglés y español con frases de transición.</span></li>
+      <li><a href="ceremony-samples/vow-writing.html"><span data-lang="en">Vow writing guide</span><span data-lang="es">Guía para escribir votos</span></a> — <span data-lang="en">prompts and examples for writing your own vows.</span><span data-lang="es">preguntas y ejemplos para escribir vuestros votos.</span></li>
+      <li><a href="ceremony-samples/unity-rituals.html"><span data-lang="en">Unity ritual options</span><span data-lang="es">Opciones de ritual de unión</span></a> — <span data-lang="en">candle, sand, rope, wine box, and what each one actually signals.</span><span data-lang="es">vela, arena, cuerda, caja de vino y qué significa cada uno.</span></li>
+      <li><a href="ceremony-samples/marriage-license.html"><span data-lang="en">Marriage license guide for [Your State]</span><span data-lang="es">Guía de licencia de matrimonio para [Your State]</span></a> — <span data-lang="en">where to apply, what to bring, and how long it takes.</span><span data-lang="es">dónde solicitarla, qué llevar y cuánto tarda.</span></li>
     </ul>
   </div>
 </section>
 
 <section id="faq">
   <div class="container">
-    <h2>Common questions</h2>
+    <h2>
+      <span data-lang="en">Common questions</span>
+      <span data-lang="es">Preguntas frecuentes</span>
+    </h2>
 
     <div class="faq-item">
-      <h3>How do we get a marriage license in [Your State]?</h3>
-      <p>Apply at your county clerk's office. Both parties appear in person with valid ID. I walk clients through the timing and any waiting period before the wedding date.</p>
+      <h3>
+        <span data-lang="en">How do we get a marriage license in [Your State]?</span>
+        <span data-lang="es">¿Cómo obtenemos la licencia de matrimonio en [Your State]?</span>
+      </h3>
+      <p>
+        <span data-lang="en">Apply at your county clerk's office. Both parties appear in person with valid ID. I walk clients through the timing and any waiting period before the wedding date.</span>
+        <span data-lang="es">Se solicita en la oficina del secretario del condado. Ambos deben presentarse en persona con identificación válida. Yo explico los plazos y cualquier periodo de espera antes de la boda.</span>
+      </p>
     </div>
     <div class="faq-item">
-      <h3>Do you perform bilingual ceremonies?</h3>
-      <p>Yes. Fully in English, fully in Spanish, or a mix. We decide which sections are translated based on who is in the room.</p>
+      <h3>
+        <span data-lang="en">Do you perform bilingual ceremonies?</span>
+        <span data-lang="es">¿Realizas ceremonias bilingües?</span>
+      </h3>
+      <p>
+        <span data-lang="en">Yes. Fully in English, fully in Spanish, or a mix. We decide which sections are translated based on who is in the room.</span>
+        <span data-lang="es">Sí. Completamente en inglés, en español o una mezcla. Decidimos qué secciones se traducen según quién esté presente.</span>
+      </p>
     </div>
     <div class="faq-item">
-      <h3>Can we write our own vows?</h3>
-      <p>Yes, and most couples do. I provide prompts if you want them and leave you alone if you don't.</p>
+      <h3>
+        <span data-lang="en">Can we write our own vows?</span>
+        <span data-lang="es">¿Podemos escribir nuestros propios votos?</span>
+      </h3>
+      <p>
+        <span data-lang="en">Yes, and most couples do. I provide prompts if you want them and leave you alone if you don't.</span>
+        <span data-lang="es">Sí, y la mayoría lo hace. Doy ideas si las queréis y os dejo en paz si no.</span>
+      </p>
     </div>
     <div class="faq-item">
-      <h3>What is included?</h3>
-      <p>An initial consultation, a written ceremony draft, revisions, a rehearsal if you want one, and the ceremony itself. Fees are quoted per wedding, not per hour.</p>
+      <h3>
+        <span data-lang="en">What is included?</span>
+        <span data-lang="es">¿Qué incluye?</span>
+      </h3>
+      <p>
+        <span data-lang="en">An initial consultation, a written ceremony draft, revisions, a rehearsal if you want one, and the ceremony itself. Fees are quoted per wedding, not per hour.</span>
+        <span data-lang="es">Una consulta inicial, un borrador escrito, revisiones, un ensayo si lo queréis y la ceremonia. El precio es por boda, no por hora.</span>
+      </p>
     </div>
     <div class="faq-item">
-      <h3>How far in advance should we book?</h3>
-      <p>Three to six months is typical. Shorter notice is often possible, especially for weekday ceremonies.</p>
+      <h3>
+        <span data-lang="en">How far in advance should we book?</span>
+        <span data-lang="es">¿Con cuánta antelación reservamos?</span>
+      </h3>
+      <p>
+        <span data-lang="en">Three to six months is typical. Shorter notice is often possible, especially for weekday ceremonies.</span>
+        <span data-lang="es">Lo normal es de tres a seis meses. A veces es posible con menos tiempo, sobre todo entre semana.</span>
+      </p>
     </div>
   </div>
 </section>
 
 <section id="reviews" class="testimonials">
   <div class="container">
-    <h2>What couples say</h2>
+    <h2>
+      <span data-lang="en">What couples say</span>
+      <span data-lang="es">Lo que dicen las parejas</span>
+    </h2>
     <div class="testimonial-grid">
       <div class="testimonial">
-        <p>"He asked questions we hadn't thought about, then wrote something that sounded like us. Our families noticed."</p>
+        <p>
+          <span data-lang="en">"He asked questions we hadn't thought about, then wrote something that sounded like us. Our families noticed."</span>
+          <span data-lang="es">"Hizo preguntas que no nos habíamos planteado y escribió algo que sonaba a nosotros. Nuestras familias lo notaron."</span>
+        </p>
         <cite>— Maria &amp; James, [City]</cite>
       </div>
       <div class="testimonial">
-        <p>"The bilingual ceremony worked. Both sets of grandparents followed the whole thing."</p>
+        <p>
+          <span data-lang="en">"The bilingual ceremony worked. Both sets of grandparents followed the whole thing."</span>
+          <span data-lang="es">"La ceremonia bilingüe funcionó. Los dos abuelos siguieron todo."</span>
+        </p>
         <cite>— Sofia &amp; Daniel, [City]</cite>
       </div>
       <div class="testimonial">
-        <p>"He handled the license paperwork questions before we even asked. That alone was worth it."</p>
+        <p>
+          <span data-lang="en">"He handled the license paperwork questions before we even asked. That alone was worth it."</span>
+          <span data-lang="es">"Resolvió las dudas del papeleo de la licencia antes de que preguntáramos. Solo eso ya valió la pena."</span>
+        </p>
         <cite>— Emily &amp; Ryan, [City]</cite>
       </div>
     </div>
@@ -167,16 +264,61 @@ footer a { color:#e8c14a; }
 </section>
 
 <section id="contact" class="cta">
-  <h2>Get in touch</h2>
-  <p>Tell me your date, your venue, and roughly what kind of ceremony you want. I'll reply with availability and a quote.</p>
-  <a href="mailto:info@officiantxavier.com" class="btn">Email Officiant Xavier</a>
-  <p style="margin-top:1.2rem;">Or call <a href="tel:+862-440-4607" style="color:#fff;">+1 (XXX) XXX-XXXX</a></p>
+  <h2>
+    <span data-lang="en">Get in touch</span>
+    <span data-lang="es">Contacto</span>
+  </h2>
+  <p>
+    <span data-lang="en">Tell me your date, your venue, and roughly what kind of ceremony you want. I'll reply with availability and a quote.</span>
+    <span data-lang="es">Cuéntame la fecha, el lugar y qué tipo de ceremonia queréis. Te responderé con disponibilidad y presupuesto.</span>
+  </p>
+  <a href="mailto:info@officiantxavier.com" class="btn">
+    <span data-lang="en">Email Officiant Xavier</span>
+    <span data-lang="es">Escribir a Officiant Xavier</span>
+  </a>
+  <p style="margin-top:1.2rem;">
+    <span data-lang="en">Or call</span>
+    <span data-lang="es">O llama al</span>
+    <a href="tel:1-862-440-4607" style="color:#fff;">+1 (XXX) XXX-XXXX</a>
+  </p>
 </section>
 
 <footer>
-  <p>&copy; 2026 Officiant Xavier. Serving Middlesex County, NJ and surrounding counties.</p>
-  <p><a href="#services">Services</a> &middot; <a href="#samples">Ceremony Samples</a> &middot; <a href="#faq">FAQ</a> &middot; <a href="#contact">Contact</a></p>
+  <p>
+    <span data-lang="en">&copy; 2026 Officiant Xavier. Serving Middlesex County, NJ and surrounding counties.</span>
+    <span data-lang="es">&copy; 2026 Officiant Xavier. Sirviendo a Middlesex County, NJ y condados cercanos.</span>
+  </p>
+  <p>
+    <a href="#services"><span data-lang="en">Services</span><span data-lang="es">Servicios</span></a> &middot;
+    <a href="#samples"><span data-lang="en">Ceremony Samples</span><span data-lang="es">Ejemplos</span></a> &middot;
+    <a href="#faq"><span data-lang="en">FAQ</span><span data-lang="es">Preguntas</span></a> &middot;
+    <a href="#contact"><span data-lang="en">Contact</span><span data-lang="es">Contacto</span></a>
+  </p>
 </footer>
+
+<script>
+(function () {
+  var saved = localStorage.getItem('lang') || 'en';
+  applyLang(saved);
+
+  var btn = document.getElementById('lang-toggle');
+  if (btn) {
+    btn.addEventListener('click', function () {
+      var current = document.documentElement.lang === 'es' ? 'es' : 'en';
+      var next = current === 'en' ? 'es' : 'en';
+      localStorage.setItem('lang', next);
+      applyLang(next);
+    });
+  }
+
+  function applyLang(lang) {
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-lang]').forEach(function (el) {
+      el.style.display = el.getAttribute('data-lang') === lang ? '' : 'none';
+    });
+  }
+})();
+</script>
 
 </body>
 </html>
